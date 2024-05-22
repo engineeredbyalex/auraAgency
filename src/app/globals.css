@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  background-color: #fff;
+  /* background-color: #161616; */
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+}
+
+
+/* Base font size */
+:root {
+  font-size: 16px;
+}
+.playFair{
+  font-family:'Playfair Display' ;
+}
+
+/* Desktop Styles */
+  h1 {
+    @apply text-[4.5rem] lg:text-[5.5rem]; /* Equivalent to 120px */
+  }
+
+  h2 {
+     @apply text-[3.5rem] lg:text-[4.65rem]; /* Adjusted with golden ratio */
+  }
+
+  h3 {
+    @apply  text-[1.75rem] lg:text-[2.88rem]; /* Adjusted with golden ratio */
+  }
+
+  h4 {
+   @apply  text-[1.28rem] lg:text-[1.78rem]/* Adjusted with golden ratio */
+  }
+
+  h5 {
+   @apply  text-[0.88rem] lg:text-[1.10rem] /* Adjusted with golden ratio */
+  }
+
+  h6 {
+   @apply  text-[0.68rem]
+  }
+
+  p {
+  @apply   text-[1rem]
+  }
+
+
+.navBar {
+  @apply w-full h-[4rem] flex items-center justify-center bg-white overflow-x-hidden
+}
+.menu{
+  @apply w-[3rem] h-[3rem]
+}
+
+.marquees {
+  margin: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.marquees>* {
+  white-space: nowrap;
+  display: flex;
+  width: fit-content;
+  animation: move var(--d) linear infinite;
+}
+
+.marquees>*:nth-child(1) {
+  --d: 18s;
+}
+
+.marquees>*:nth-child(2) {
+  --d: 30s;
+}
+
+.marquees>*:nth-child(3) {
+  --d: 16s;
+}
+
+.marquees>*:nth-child(4) {
+  --d: 30s;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@media screen and(max-width:768px) {
+  
+}
+
+.navigationBar{
+  position: absolute;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  width: 100vw;
+  background-color: white;
+}
+
+
+.navigationContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+      margin: 00px 60px 0px 60px;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  margin: 00px 60px 0px 60px;
+}
+.logoWrapper {
+      display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 50%;
+}
+.menu_items{
+  display: none;
+
+}
+.menu_items_1 {
+    display: none;
+
+}
+.menu_items_2 {
+    display: none;
+    justify-content: center;
+    position: absolute;
+    transform: translateX(-2%); 
+    top: 10rem;
+    color: #fff;
+    z-index: 1;
+}
+
+.menu_items_3 {
+    display: none;
+
+
+}
+
+
+.menuWrapper {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 50%;
+}
+
+.logo {
+    color: #000;
+}
+
+.menu {
+    color: #000;
+   
+}
+
+.loading_screen{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: black;
+  z-index: 1000;
+  overflow: hidden;
+}
+.letter{
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.letter_1{
+ transform: translateY(-100vh);
+}
+.letter_2{
+ transform: translateY(100vh);
+}
+.letter_3{
+ transform: translateY(-100vh);
+}
+.letter_4{
+ transform: translateY(100vh);
+}
+.catch_text{
+  opacity: 0;
+}
+
+
+/*  Image Slider */
+
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.button {
+  width: 2rem;
+  height: 2rem;
+  -webkit-filter: invert(100%);
+  /* Safari/Chrome */
+  filter: invert(100%);
+}
+
+.leftClick {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  top: calc(50% - 20px);
+  left: 20px;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  transition: transform 0.2s;
+}
+
+.leftClick:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.rightClick {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  top: calc(50% - 20px);
+  right: 20px;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  transition: transform 0.2s;
+}
+
+.rightClick:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+.dots {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.dot {
+  width: 1rem;
+  height: 1rem;
+  background-color: #000;
+ border-radius: 1rem;
+  margin: 0 10px;
+}
+
+.dot:hover {
+  cursor: pointer;
+  background-color: rgb(76, 171, 202);
+}
+
+.activeDot {
+  width: 1rem;
+  height: 1rem;
+  background-color: #E83D00;
+  border-radius: 1rem;
+  margin: 0 10px;
+}
+
+.activeDot:hover {
+  cursor: pointer;
+}
