@@ -15,7 +15,7 @@ export default function AboutUs() {
               What does this mean ?
             </h3>
             <h5 className="text-center w-[80%]">
-                We are Aura - a team passionate about digital creation.<br /> We are delighted to bring your ideas to life and to create remarkable digital experiences.<br /> Let's turn your dreams into online reality!
+                We are Aura - a team passionate about digital creation.<br /> We are delighted to bring your ideas to life and to create remarkable digital experiences.<br /> Lets turn your dreams into online reality!
             </h5>
             <div className="mt-3">
                 <Link href={'/contact'}>
