@@ -13,7 +13,7 @@ export default function Projects() {
               What does this mean ?
             </h3>
             <h5 className="text-center w-[80%]">
-             Well...Just talkin about how greate we are isn't our way of doing things, so, we beleive in letting our work speak for us.
+             Well...Just talkin about how greate we are isnt our way of doing things, so, we beleive in letting our work speak for us.
             </h5>
             <div className="mt-3">
                 <Link href={'/contact'}>
