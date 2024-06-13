@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 // importing gsap
 import { gsap } from "gsap";
 // importing logo
-import Logo from "@/app/logo.svg"
+import Logo from "@/logo.svg"
 // importing image
 import Image from "next/image";
 
@@ -43,9 +43,7 @@ export default function Navigation() {
             <div className="container">
                 <div className="navigationContainer">
                     <div className="logoWrapper">
-                        <Link href="/">
-                            <Image className="logo"  src={Logo} alt='logo' />
-                        </Link>
+                       <Logo className="w-[3rem] md:w-[4rem] lg:w-[3.5rem] h-[3rem] md:h-[4rem] lg:h-[3.5rem] svg_icon" />
                     </div>
                     <div className="menuWrapper">
                         <IoMenuOutline className="menu" onClick={() => setToggle(!toggle)} size={40} />
@@ -54,17 +52,17 @@ export default function Navigation() {
                 <ul className="">
                     <li className="menu_items_1">
                         <Link href={'/shop'}>
-                            <p>Magazin</p>
+                            <p>Shop</p>
                         </Link>
                     </li>
                     <li className="menu_items_2">
                         <Link href={'/portfolio'}>
-                            <p>Portofoliu</p>
+                            <p>Projects</p>
                         </Link>
                     </li>
                     <li className="menu_items_3">
                         <Link href={'/colaboration'}>
-                            <p>Colaborare</p>
+                            <p>Work with us</p>
                         </Link>
                     </li>
                 </ul>

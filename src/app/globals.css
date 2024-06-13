@@ -52,11 +52,14 @@ body {
   }
 
 
-.navBar {
-  @apply w-full h-[4rem] flex items-center justify-center bg-white overflow-x-hidden
+.navigationBar {
+  width: 100vw;
+  height: 4rem;
+  background-color: black;
 }
 .menu{
-  @apply w-[3rem] h-[3rem]
+ width: 3rem;
+ height: 3rem;
 }
 
 .marquees {
@@ -108,7 +111,7 @@ body {
   justify-content: center;
   top: 0;
   width: 100vw;
-  background-color: white;
+  background-color: black;
 }
 
 
@@ -135,6 +138,9 @@ body {
     align-items: center;
     width: 50%;
 }
+.svg_icon{
+  fill: white;
+}
 .menu_items{
   display: none;
 
@@ -155,10 +161,7 @@ body {
 
 .menu_items_3 {
     display: none;
-
-
 }
-
 
 .menuWrapper {
     display: flex;
@@ -168,14 +171,12 @@ body {
 }
 
 .logo {
-    color: #000;
+    color: #fff;
 }
 
 .menu {
-    color: #000;
-   
+    color: #fff;
 }
-
 .loading_screen{
   display: flex;
   flex-direction: column;
@@ -208,88 +209,19 @@ body {
 .catch_text{
   opacity: 0;
 }
-
-
-/*  Image Slider */
-
-.wrapper {
-  position: relative;
-  margin: 0 auto;
-  overflow: hidden;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-.button {
-  width: 2rem;
-  height: 2rem;
-  -webkit-filter: invert(100%);
-  /* Safari/Chrome */
-  filter: invert(100%);
-}
-
-.leftClick {
-  position: absolute;
-  width: 2rem;
-  height: 2rem;
-  top: calc(50% - 20px);
-  left: 20px;
-  color: #fff;
-  display: grid;
-  place-items: center;
-  transition: transform 0.2s;
-}
-
-.leftClick:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.rightClick {
-  position: absolute;
-  width: 2rem;
-  height: 2rem;
-  top: calc(50% - 20px);
-  right: 20px;
-  color: #fff;
-  display: grid;
-  place-items: center;
-  transition: transform 0.2s;
-}
-
-.rightClick:hover {
-  cursor: pointer;
-  transform: scale(1.3);
-}
-
-.dots {
-  width: 100%;
+.landing_page{
+  height: calc(100vh - 8rem);
+  width: 100vw;
   display: flex;
-  justify-content: center;
-  padding: 20px 0;
+  align-items: end;
+   justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/aura-agency-32c86.appspot.com/o/mockup_1_1.png?alt=media&token=aa6c7c32-9230-4379-aef1-19750e9e53f3');
 }
-
-.dot {
-  width: 1rem;
-  height: 1rem;
-  background-color: #000;
- border-radius: 1rem;
-  margin: 0 10px;
-}
-
-.dot:hover {
-  cursor: pointer;
-  background-color: rgb(76, 171, 202);
-}
-
-.activeDot {
-  width: 1rem;
-  height: 1rem;
-  background-color: #E83D00;
-  border-radius: 1rem;
-  margin: 0 10px;
-}
-
-.activeDot:hover {
-  cursor: pointer;
+.landing_page h5 {
+    color: #fff;
+    font:bold;
+    text-transform: uppercase;
+   margin-bottom: 2rem;
 }

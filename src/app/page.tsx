@@ -1,16 +1,16 @@
 'use client'
 // importing Navigation
-import Navigation from "@/layouts/Navigation";
+import Navigation from "@/app/layouts/Navigation";
 // importing Title
-import Title from "@/components/Title"
-// importing image slider
-import Slider from "@madzadev/image-slider";
+import Title from "@/app/components/Title"
 // importing Loading Screen
-import LoadingScreen from "@/loading/LoadingScreen"
+import LoadingScreen from "@/app/loading/LoadingScreen"
 // importing Landing
-import Landing from "@/sections/landing";
+import Landing from "@/app/sections/landing";
 // importing AboutUs
-import AboutUs from "../sections/about"
+import AboutUs from "./sections/about"
+// importing Projects
+import Projects from "./sections/projects";
 
 
 export default function Home() {
@@ -25,8 +25,10 @@ export default function Home() {
     <div className="w-[100vw] min-h-screen flex flex-col items-center justify-start overflow-hidden">
       {/* <LoadingScreen/> */}
       <Navigation />
+      <Title/>
       <Landing/>
       <AboutUs />
+      <Projects />
     </div>
   );
 }

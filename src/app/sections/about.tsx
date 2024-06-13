@@ -1,12 +1,13 @@
 // importing button
-import Button from "@/components/Button"
+import Button from "@/app/components/Button"
 // importing Link
 import Link from "next/link"
+// importing page
 
 
 export default function AboutUs() {
     return (
-        <div className="w-full h-auto flex flex-col items-center justify-center">
+        <div className="w-full h-auto mt-10 mb-10 flex flex-col items-center justify-center">
             <h2 className="mt-6 font-bold leading-[3.5rem] text-center uppercase">
                 BORN OUT OF PASSION
             </h2>
